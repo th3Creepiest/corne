@@ -65,7 +65,7 @@
                         display-name = "Lower";
                         bindings = <
                         &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT               &kp CARET    &kp AMPS     &kp KP_MULTIPLY &kp LPAR     &kp RPAR
-                        &trans        &trans        &trans        &trans        &trans                  &kp LEFT     &kp DOWN     &kp UP          &kp RIGHT    &kp SQT
+                        &kp CAPS      &trans        &trans        &trans        &trans                  &kp LEFT     &kp DOWN     &kp UP          &kp RIGHT    &kp SQT
                         &trans        &trans        &trans        &trans        &trans                  &trans       &trans       &trans          &trans       &trans
                                                     &trans        &trans        &trans                  &kp TAB      &kp ESC      &kp DEL
                         >;
