@@ -55,7 +55,7 @@
                         display-name = "Base";
                         bindings = <
                         &kp Q         &kp       W   &kp       E   &kp        R  &kp        T            &kp        Y &kp        U &kp       I     &kp       O  &kp P
-                        &kp A         &hml LGUI S   &hml LALT D   &hml LCTRL F  &hml LSHFT G            &hmr RSHFT H &hmr LCTRL J &hmr RALT K     &hmr RGUI L  &kp DQT
+                        &kp A         &hml LGUI S   &hml LALT D   &hml LSHFT F  &hml LCTRL G            &hmr RCTRL H &hmr RSHFT J &hmr RALT K     &hmr RGUI L  &kp DQT
                         &kp Z         &kp       X   &kp       C   &kp        V  &kp        B            &kp        N &kp        M &trans          &kp  DOT     &kp QMARK
                                                     &td_md_fk     &mo        1  &kp  SPACE              &kp  RET     &mo        2 &kp  BSPC
                         >;
