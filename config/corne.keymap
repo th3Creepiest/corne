@@ -101,7 +101,7 @@
                         &kp F11       &kp F12         &trans       &trans        &trans                  &trans       &trans         &trans          &trans       &trans
                                                       &trans       &trans        &trans                  &trans       &trans         &trans
                         >;
-                }
+                };
 
                 bluetooth {
                         display-name = "B.T.";
@@ -111,7 +111,7 @@
                         &trans        &trans          &trans       &trans        &trans                  &trans       &trans         &trans          &trans       &trans
                                                       &trans       &to L_BASE    &trans                  &trans       &to L_BASE     &trans
                         >;
-                }
+                };
 
                 // additional layers for use through ZMK Studio
 
