@@ -11,7 +11,8 @@
 #define L_BASE 0
 #define L_RAISE 1
 #define L_LOWER 2
-#define L_WTF 3
+#define L_FUNC 3
+#define L_BLUETOOTH 4
 
 / {
         chosen {
@@ -46,48 +47,71 @@
 
         };
 
+        combos {
+                compatible = "zmk,combos";
+
+                combo_bluetooth {
+                        timeout-ms = <50>;
+                        key-positions = <24 25>;
+                        bindings = <&to L_BLUETOOTH>;
+                };
+
+        };
+
+
         keymap {
                 compatible = "zmk,keymap";
 
                 base {
                         display-name = "Base";
                         bindings = <
-                        &kp Q         &kp       W   &kp       E  &kp        R  &kp        T            &kp        Y &kp        U   &kp       I     &kp       O  &kp P
-                        &kp A         &hml LGUI S   &hml LALT D  &hml LSHFT F  &hml LCTRL G            &hmr RCTRL H &hmr RSHFT J   &hmr RALT K     &hmr RGUI L  &kp DQT
-                        &kp Z         &kp       X   &kp       C  &kp        V  &kp        B            &kp        N &kp        M   &kp  SQT        &kp  DOT     &kp QMARK
-                                                    &mo  L_WTF   &mo  L_RAISE  &kp  SPACE              &kp  RET     &mo  L_LOWER   &kp  BSPC
+                        &kp Q         &kp       W     &kp       E  &kp        R  &kp        T            &kp        Y &kp        U   &kp       I     &kp       O  &kp P
+                        &kp A         &hml LGUI S     &hml LALT D  &hml LSHFT F  &hml LCTRL G            &hmr RCTRL H &hmr RSHFT J   &hmr RALT K     &hmr RGUI L  &kp DQT
+                        &kp Z         &kp       X     &kp       C  &kp        V  &kp        B            &kp        N &kp        M   &kp  SQT        &kp  DOT     &kp QMARK
+                                                      &mo  L_FUNC  &mo  L_LOWER  &kp  SPACE              &kp  RET     &mo  L_RAISE   &kp  BSPC
                         >;
                 };
+
 
                 raise {
                         display-name = "Raise";
                         bindings = <
-                        &kp N1        &kp N2        &kp N3       &kp N4        &kp N5                  &kp N6       &kp N7         &kp N8          &kp N9       &kp N0
-                        &kp MINUS     &kp EQUAL     &kp LBRC     &kp LBKT      &kp LPAR                &kp RPAR     &kp RBKT       &kp RBRC        &kp FSLH     &kp BSLH
-                        &kp GRAVE     &kp PLUS      &kp UNDER    &kp COMMA     &kp COLON               &kp SEMI     &kp DOT        &kp LT          &kp GT       &trans
-                                                    &trans       &kp ESC       &trans                  &trans       &trans         &trans
+                        &kp EXCL      &kp AT          &kp HASH     &kp DLLR      &kp PRCNT               &kp C_BRI_DEC &kp C_BRI_INC &kp C_MUTE      &kp C_VOL_DN &kp C_VOL_UP
+                        &kp CARET     &kp AMPS        &trans       &trans        &trans                  &kp LEFT      &kp DOWN      &kp UP          &kp RIGHT    &trans
+                        &kp CAPS      &trans          &trans       &trans        &trans                  &kp C_PREV    &kp C_PP      &kp C_NEXT      &kp C_STOP   &trans
+                                                      &trans       &kp ESC       &trans                  &trans        &trans        &kp PSCRN
                         >;
                 };
 
                 lower {
                         display-name = "Lower";
                         bindings = <
-                        &kp EXCL      &kp AT        &kp HASH     &kp DLLR      &kp PRCNT               &kp CARET    &kp AMPS       &kp KP_MULTIPLY &kp LPAR     &kp RPAR
-                        &kp CAPS      &trans        &trans       &trans        &trans                  &kp LEFT     &kp DOWN       &kp UP          &kp RIGHT    &kp SQT
-                        &trans        &trans        &trans       &trans        &trans                  &trans       &trans         &trans          &trans       &trans
-                                                    &trans       &trans        &trans                  &kp TAB      &kp ESC        &kp DEL
+                        &kp N1        &kp N2          &kp N3       &kp N4        &kp N5                  &kp N6       &kp N7         &kp N8          &kp N9       &kp N0
+                        &kp PLUS      &kp MINUS       &kp LBRC     &kp LBKT      &kp LPAR                &kp RPAR     &kp RBKT       &kp RBRC        &kp LT       &kp GT
+                        &kp EQUAL     &kp KP_MULTIPLY &kp UNDER    &kp PIPE      &kp GRAVE               &kp COLON    &kp SEMI       &kp COMMA       &kp BSLH     &kp FSLH
+                                                      &trans       &trans        &trans                  &kp TAB      &kp ESC        &kp DEL
                         >;
                 };
 
-                wtf {
-                        display-name = "WTF";
+                functions {
+                        display-name = "Func"
                         bindings = <
-                        &kp F1        &kp F2        &kp F3       &kp F4        &kp F5                  &kp PSCRN    &trans         &kp C_MUTE      &kp C_VOL_DN &kp C_VOL_UP
-                        &kp F6        &kp F7        &kp F8       &kp F9        &kp F10                 &kp LEFT     &kp DOWN       &kp UP          &kp RIGHT    &kp C_BRI_INC
-                        &kp F11       &kp F12       &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2            &kp C_PREV   &kp C_PP       &kp C_NEXT      &kp C_STOP   &kp C_BRI_DEC
-                                                    &trans       &bt BT_SEL 3  &bt BT_SEL 4            &bt BT_CLR   &bt BT_CLR_ALL &trans
+                        &kp F1        &kp F2          &kp F3       &kp F4        &kp F5                  &trans       &trans         &trans          &trans       &trans
+                        &kp F6        &kp F7          &kp F8       &kp F9        &kp F10                 &trans       &trans         &trans          &trans       &trans
+                        &kp F11       &kp F12         &trans       &trans        &trans                  &trans       &trans         &trans          &trans       &trans
+                                                      &trans       &trans        &trans                  &trans       &trans         &trans
                         >;
-                };
+                }
+
+                bluetooth {
+                        display-name = "B.T."
+                        bindings = <
+                        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4            &bt BT_CLR   &bt BT_CLR_ALL &trans          &trans       &trans
+                        &trans        &trans          &trans       &trans        &trans                  &trans       &trans         &trans          &trans       &trans
+                        &trans        &trans          &trans       &trans        &trans                  &trans       &trans         &trans          &trans       &trans
+                                                      &trans       &to L_BASE    &trans                  &trans       &to L_BASE     &trans
+                        >;
+                }
 
                 // additional layers for use through ZMK Studio
 
@@ -104,4 +128,5 @@
                 };
 
         };
+
 };
