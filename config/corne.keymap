@@ -51,6 +51,18 @@
         combos {
                 compatible = "zmk,combos";
 
+                combo_escape_key {
+                        timeout-ms = <50>;
+                        key-positions = <0 1>;
+                        bindings = <&kp ESC>;
+                };
+
+                combo_delete_key {
+                        timeout-ms = <50>;
+                        key-positions = <8 9>;
+                        bindings = <&kp DEL>;
+                };
+
                 combo_media_layer {
                         timeout-ms = <50>;
                         key-positions = <34 5>;
@@ -86,7 +98,7 @@
                         &kp N1        &kp N2          &kp N3        &kp N4        &kp N5                        &kp N6        &kp N7         &kp N8      &kp N9       &kp N0
                         &kp PLUS      &kp MINUS       &kp LBRC      &kp LBKT      &kp LPAR                      &kp RPAR      &kp RBKT       &kp RBRC    &kp LT       &kp GT
                         &kp EQUAL     &kp KP_MULTIPLY &kp UNDER     &kp PIPE      &kp GRAVE                     &kp COLON     &kp SEMI       &kp COMMA   &kp BSLH     &kp FSLH
-                                                      &trans        &trans        &trans                        &kp TAB       &kp ESC        &kp DEL
+                                                      &none         &kp ESC       &trans                        &none         &none          &none
                         >;
                 };
 
@@ -94,19 +106,19 @@
                         display-name = "Lower";
                         bindings = <
                         &kp EXCL      &kp AT          &kp HASH      &kp DLLR      &kp PRCNT                     &kp CARET     &kp AMPS       &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP
-                        &trans        &trans          &trans        &trans        &trans                        &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &trans
-                        &kp CAPS      &trans          &trans        &trans        &trans                        &kp C_PREV    &kp C_PP       &kp C_NEXT  &kp C_STOP   &trans
-                                                      &trans        &kp ESC       &trans                        &trans        &trans         &kp PSCRN
+                        &kp CAPS      &trans          &trans        &trans        &trans                        &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &none
+                        &none         &none           &none         &none         &none                         &none         &none          &none       &none        &none
+                                                      &none         &none         &none                         &kp TAB       &kp ESC        &kp DEL
                         >;
                 };
 
                 functions {
                         display-name = "Func";
                         bindings = <
-                        &kp F1        &kp F2          &kp F3        &kp F4        &kp F5                        &trans        &trans         &trans      &trans       &trans
-                        &kp F6        &kp F7          &kp F8        &kp F9        &kp F10                       &trans        &trans         &trans      &trans       &trans
-                        &kp F11       &kp F12         &trans        &trans        &trans                        &trans        &trans         &trans      &trans       &trans
-                                                      &trans        &trans        &trans                        &trans        &trans         &trans
+                        &kp F1        &kp F2          &kp F3        &kp F4        &kp F5                        &none         &none          &none       &none        &none
+                        &kp F6        &kp F7          &kp F8        &kp F9        &kp F10                       &none         &none          &none       &none        &none
+                        &kp F11       &kp F12         &none         &none         &none                         &none         &none          &none       &none        &none
+                                                      &none         &none         &none                         &none         &none          &none
                         >;
                 };
 
