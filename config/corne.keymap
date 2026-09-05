@@ -53,7 +53,7 @@
 
                 combo_media_layer {
                         timeout-ms = <50>;
-                        key-positions = <33 5>;
+                        key-positions = <34 5>;
                         bindings = <&to L_MEDIA>;
                 };
 
