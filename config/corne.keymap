@@ -77,7 +77,6 @@
 
         };
 
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -90,7 +89,6 @@
                                                       &mo  L_FUNC   &mo  L_LOWER  &kp  SPACE                    &kp  RET      &mo  L_RAISE   &kp  BSPC
                         >;
                 };
-
 
                 raise {
                         display-name = "Raise";
