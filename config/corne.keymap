@@ -48,6 +48,7 @@
 
                 alt_tab: alt_tab {
                         compatible = "zmk,behavior-hold-tap";
+                        #binding_cells = <0>;
                         flavor = "tap-preferred";
                         tapping-term-ms = <200>;
                         bindings = <&kp LALT>, <&kp TAB>;
