@@ -85,7 +85,7 @@
                         bindings = <
                         &kp Q         &kp       W     &kp       E   &kp        R  &kp        T                  &kp        Y  &kp        U   &kp       I &kp       O  &kp P
                         &kp A         &hml LGUI S     &hml LALT D   &hml LSHFT F  &hml LCTRL G                  &hmr RCTRL H  &hmr RSHFT J   &hmr RALT K &hmr RGUI L  &kp DQT
-                        &kp Z         &kp       X     &kp       C   &kp        V  &kp        B                  &kp        N  &kp        M   &kp  SQT    &kp  DOT     &kp QMARK
+                        &kp Z         &kp       X     &kp       C   &kp        V  &kp        B                  &kp        N  &kp        M   &kp  QMARK  &kp  DOT     &kp FSLH
                                                       &mo  L_FUNC   &mo  L_LOWER  &kp  SPACE                    &kp  RET      &mo  L_RAISE   &kp  BSPC
                         >;
                 };
@@ -95,7 +95,7 @@
                         bindings = <
                         &kp N1        &kp N2          &kp N3        &kp N4        &kp N5                        &kp N6        &kp N7         &kp N8      &kp N9       &kp N0
                         &kp PLUS      &kp MINUS       &kp LBRC      &kp LBKT      &kp LPAR                      &kp RPAR      &kp RBKT       &kp RBRC    &kp LT       &kp GT
-                        &kp EQUAL     &kp KP_MULTIPLY &kp UNDER     &kp PIPE      &kp GRAVE                     &kp COLON     &kp SEMI       &kp COMMA   &kp BSLH     &kp FSLH
+                        &kp EQUAL     &kp KP_MULTIPLY &kp UNDER     &kp PIPE      &kp GRAVE                     &kp COLON     &kp SEMI       &kp UNDER   &kp BSLH     &kp FSLH
                                                       &none         &kp ESC       &trans                        &none         &none          &none
                         >;
                 };
@@ -105,7 +105,7 @@
                         bindings = <
                         &kp EXCL      &kp AT          &kp HASH      &kp DLLR      &kp PRCNT                     &kp CARET     &kp AMPS       &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP
                         &kp CAPS      &trans          &trans        &trans        &trans                        &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &kp SQT
-                        &kp TILDE     &kp GRAVE       &none         &none         &none                         &none         &none          &none       &kp COMMA    &kp FSLH
+                        &kp TILDE     &kp GRAVE       &none         &none         &none                         &kp COLON     &kp SEMI       &kp UNDER   &kp COMMA    &kp FSLH
                                                       &none         &none         &none                         &kp TAB       &kp ESC        &kp DEL
                         >;
                 };
@@ -114,8 +114,8 @@
                         display-name = "Func";
                         bindings = <
                         &kp F1        &kp F2          &kp F3        &kp F4        &kp F5                        &kp F6        &kp F7         &kp F8      &kp F9       &kp F10
-                        &kp F11       &kp F12         &kp LSHFT     &kp TAB       &kp LALT                      &none         &none          &none       &none        &none
-                        &none         &none           &none         &none         &none                         &none         &none          &none       &none        &none
+                        &kp F11       &kp F12         &kp LSHFT     &kp TAB       &kp LALT                      &none         &none          &none       &none        &kp C_BRI_INC
+                        &none         &none           &none         &none         &none                         &none         &none          &none       &none        &kp C_BRI_DEC
                                                       &none         &none         &none                         &none         &kp ESC        &none
                         >;
                 };
@@ -123,8 +123,8 @@
                 media {
                         display-name = "Media";
                         bindings = <
-                        &kp C_BRI_INC &none           &none         &none         &trans                        &kp LT        &kp GT         &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP
-                        &kp C_BRI_DEC &none           &kp COMMA     &kp DOT       &none                         &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &kp F
+                        &none         &none           &none         &none         &trans                        &kp LT        &kp GT         &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP
+                        &none         &none           &kp COMMA     &kp DOT       &none                         &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &kp F
                         &none         &none           &none         &none         &none                         &kp C_PREV    &kp C_PP       &kp C_NEXT  &kp C_STOP   &kp ESC
                                                       &none         &to L_BASE    &kp SPACE                     &kp SPACE     &to L_BASE     &kp PSCRN
                         >;
