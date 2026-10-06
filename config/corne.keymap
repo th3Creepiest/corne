@@ -84,7 +84,7 @@
                         display-name = "Base";
                         bindings = <
                         &kp Q         &kp       W     &kp       E   &kp        R  &kp        T                  &kp        Y  &kp        U   &kp       I &kp       O  &kp P
-                        &kp A         &hml LGUI S     &hml LALT D   &hml LSHFT F  &hml LCTRL G                  &hmr RCTRL H  &hmr RSHFT J   &hmr RALT K &hmr RGUI L  &kp DQT
+                        &kp A         &hml LGUI S     &hml LALT D   &hml LSHFT F  &hml LCTRL G                  &hmr RCTRL H  &hmr RSHFT J   &hmr RALT K &hmr RGUI L  &kp SQT
                         &kp Z         &kp       X     &kp       C   &kp        V  &kp        B                  &kp        N  &kp        M   &kp  QMARK  &kp  DOT     &kp FSLH
                                                       &mo  L_FUNC   &mo  L_LOWER  &kp  SPACE                    &kp  RET      &mo  L_RAISE   &kp  BSPC
                         >;
@@ -104,7 +104,7 @@
                         display-name = "Lower";
                         bindings = <
                         &kp EXCL      &kp AT          &kp HASH      &kp DLLR      &kp PRCNT                     &kp CARET     &kp AMPS       &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP
-                        &kp CAPS      &trans          &trans        &trans        &trans                        &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &kp SQT
+                        &kp CAPS      &trans          &trans        &trans        &trans                        &kp LEFT      &kp DOWN       &kp UP      &kp RIGHT    &kp DQT
                         &kp TILDE     &kp GRAVE       &none         &none         &none                         &kp COLON     &kp SEMI       &kp UNDER   &kp COMMA    &kp FSLH
                                                       &none         &none         &none                         &kp TAB       &kp ESC        &kp DEL
                         >;
